@@ -1,27 +1,36 @@
-<!doctype html>
-<html>
-<head> 
-	<title> identitas kabupaten </title>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Simulator IoT - Kelompok Kami</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<h1> Kabupaten Sukoharjo </h1>
-	<p> Kota Jamu </p>
-	<img src="skh.png" alt="logo kab skh">
-	<p> Lambang </p>
-	<h2> Informasi Lainnya </h2>
-	<table>
-		<tr> 
-			<td><b>Negara </td>
-			<td> Indonesia </td>
-		</tr>
-		<tr> 
-			<td><b>Hari Jadi </td>
-			<td> 15 Juli 1946</td>
-		</tr>
-		<tr> 
-			<td><b>Luas Total  </td>
-			<td> 489,12 km2 </td>
-		</tr>
-	</table>
+    <div class="container">
+        <h1>IOT SIMULATOR DASHBOARD</h1>
+        <h3>Tema: Smart Farming</h3>
+        
+        <!-- AREA INPUT (Simulasi Sensor Fisik) -->
+        <div class="card">
+            <h2>Sinyal Input Sensor</h2>
+            <label for="inputSensor1">Sensor 1 Suhu:</label>
+            <input type="number" id="inputSensor1" placeholder="Masukkan angka...">
+            
+            <label for="inputSensor2">Sensor 2 Kelembaban:</label>
+            <input type="number" id="inputSensor2" placeholder="Masukkan angka...">
+            
+            <button onclick="jalankanSimulasi()">JALANKAN SIMULASI ALAT</button>
+        </div>
+
+        <!-- AREA OUTPUT (Simulasi Gerakan Alat/Aktuator) -->
+        <div class="card">
+            <h2>Status Aksi Alat (Aktuator)</h2>
+            <div id="indikatorVisual" class="status-box">Menunggu Data...</div>
+            <p id="keteranganStatus">Silakan masukkan data sensor lalu klik tombol di atas.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
